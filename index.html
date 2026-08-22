@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nick &amp; Gus — October 10, 2026</title>
+<title>Nick &amp; Gus | October 10, 2026</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2212%22%20fill%3D%22%230E1B15%22/%3E%3Ctext%20x%3D%2215%22%20y%3D%2230%22%20font-family%3D%22Georgia%2C%20serif%22%20font-size%3D%2222%22%20font-weight%3D%22600%22%20fill%3D%22%23EDE6D8%22%20text-anchor%3D%22middle%22%3EN%3C/text%3E%3Ctext%20x%3D%2232%22%20y%3D%2240%22%20font-family%3D%22Georgia%2C%20serif%22%20font-size%3D%2220%22%20font-style%3D%22italic%22%20fill%3D%22%23C79A46%22%20text-anchor%3D%22middle%22%3E%26amp%3B%3C/text%3E%3Ctext%20x%3D%2249%22%20y%3D%2250%22%20font-family%3D%22Georgia%2C%20serif%22%20font-size%3D%2222%22%20font-weight%3D%22600%22%20fill%3D%22%23EDE6D8%22%20text-anchor%3D%22middle%22%3EG%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -297,6 +297,18 @@
     margin-top: 6px;
   }
 
+  a.addr-link{
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold-dim);
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  a.addr-link:hover{
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+
   @media (max-width: 480px){
     .event{ grid-template-columns: 1fr; gap: 6px; }
     .event .time{ padding-top: 0; }
@@ -354,42 +366,38 @@
     color: var(--muted);
   }
 
-  /* --- Info grid (Additional Information) --- */
+  /* --- Info prose (Additional Information) --- */
   .info-section{
     padding: 20px 0 90px;
   }
 
-  .info-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2px;
-    background: var(--gold-dim);
-  }
-
-  .info-card{
-    background: var(--bg);
-    padding: 30px 24px;
+  .prose-info{
     text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
   }
 
-  .info-card h4{
+  .prose-info p{
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--ivory);
+    opacity: 0.9;
+    margin-bottom: 24px;
+  }
+
+  .prose-info p:last-child{ margin-bottom: 0; }
+
+  .prose-info .lead{
     font-family: var(--mono);
+    font-style: normal;
     font-size: 11px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 12px;
-  }
-
-  .info-card p{
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--ivory);
-    opacity: 0.85;
-  }
-
-  @media (max-width: 680px){
-    .info-grid{ grid-template-columns: 1fr; }
+    display: block;
+    margin-bottom: 6px;
   }
 
   /* --- RSVP form --- */
@@ -549,8 +557,7 @@
   </section>
 
   <section class="intro reveal">
-    <p>Five years ago we had our first date; this October we're making it official. We're keeping things small, just family and close friends for a riverside ceremony and a good meal after.</p>
-    <p><span class="accent">We'd love for you to join us!</span></p>
+    <p>Five years ago we had our first date; this October we're making it official. We're keeping things small, just family and close friends for a riverside ceremony and a good meal after. <span class="accent">We'd love for you to be there.</span></p>
   </section>
 
   <section class="schedule">
@@ -563,8 +570,8 @@
         <div class="time">4:00 PM</div>
         <div>
           <h3>Ceremony</h3>
-          <p>Hudson Mills Metropark</p>
-          <p class="addr">8801 N Territorial Rd, Dexter, MI</p>
+          <p>Delhi Metropark</p>
+          <p class="addr"><a class="addr-link" href="https://www.google.com/maps/search/?api=1&query=Delhi+Metropark%2C+3902+E+Delhi+Rd%2C+Ann+Arbor%2C+MI+48103" target="_blank" rel="noopener">3902 E Delhi Rd, Ann Arbor, MI 48103</a></p>
         </div>
       </div>
       <div class="event reveal">
@@ -572,7 +579,7 @@
         <div>
           <h3>Dinner</h3>
           <p>Pacific Rim</p>
-          <p class="addr">114 W Liberty St, Ann Arbor, MI</p>
+          <p class="addr"><a class="addr-link" href="https://www.google.com/maps/search/?api=1&query=Pacific+Rim%2C+114+W+Liberty+St%2C+Ann+Arbor%2C+MI+48104" target="_blank" rel="noopener">114 W Liberty St, Ann Arbor, MI</a></p>
         </div>
       </div>
       <div class="event reveal">
@@ -580,7 +587,7 @@
         <div>
           <h3>Optional Festivities</h3>
           <p>Location TBD</p>
-          <p class="addr">We'll head somewhere else in Ann Arbor to keep celebrating — stick around if you're up for it</p>
+          <p class="addr">We'll head somewhere else in Ann Arbor to keep celebrating. Stick around if you're up for it</p>
         </div>
       </div>
     </div>
@@ -590,19 +597,9 @@
     <div class="turn-divider reveal"></div>
     <h2 class="reveal">Additional Information</h2>
 
-    <div class="info-grid">
-      <div class="info-card reveal">
-        <h4>The Ceremony</h4>
-        <p>Held outdoors at Hudson Mills Metropark — bring a layer, even in October.</p>
-      </div>
-      <div class="info-card reveal">
-        <h4>Dinner</h4>
-        <p>Held indoors at Pacific Rim, right after the ceremony.</p>
-      </div>
-      <div class="info-card reveal">
-        <h4>After Dinner</h4>
-        <p>We'll likely head somewhere else nearby to keep the night going — no obligation, just an open invite if you want to stay out with us.</p>
-      </div>
+    <div class="prose-info">
+      <p class="reveal"><span class="lead">Attire</span>Dress nice. The ceremony will be short and outdoors; dinner will be indoors. October in Michigan can go either way, so plan accordingly.</p>
+      <p class="reveal"><span class="lead">The Metropark</span>Delhi Metropark has an entry gate. Just give our names to the attendant when you arrive and you'll be all set, nothing to pay on your end.</p>
     </div>
   </section>
 
