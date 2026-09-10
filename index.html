@@ -817,12 +817,12 @@
         if (response.ok) {
           if (attending) {
             confirmMsg.textContent = firstName
-              ? `Thank you, ${firstName}. We can't wait to celebrate with you.`
-              : "Thank you. We can't wait to celebrate with you.";
+              ? `Thank you, ${firstName}. We can't wait to celebrate with you!`
+              : "Thank you. We can't wait to celebrate with you!";
           } else {
             confirmMsg.textContent = firstName
-              ? `Thank you for letting us know, ${firstName}. We'll miss you, and we hope to see you next summer.`
-              : "Thank you for letting us know. We'll miss you, and we hope to see you next summer.";
+              ? `Thank you for letting us know, ${firstName}. We'll miss you, and we hope to see you next summer!`
+              : "Thank you for letting us know. We'll miss you, and we hope to see you next summer!";
           }
           rsvpForm.hidden = true;
           rsvpConfirm.hidden = false;
